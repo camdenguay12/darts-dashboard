@@ -12,7 +12,7 @@ window.DARTS_DATES={
 ]},
 "2026-09-30":{dateLabel:"September 30, 2026",label:"Today",matches:[
 {tournament:"World Grand Prix",round:"Second Round • Last 16",status:"final",time:"Final",player1:P("Danny Noppert","NED","",97.2,[96.1,98.5,95.7,99,97.2,96.8,100.1,97.6,98.2,97.2],[41,44,38,46,42,40,47,43,45,42]),player2:P("Ryan Joyce","ENG","",94.9,[93.8,96.4,95.1,94.3,94.9,96.0,93.9,95.6,94.5,94.9],[38,42,40,37,39,41,36,43,38,39]),score1:0,score2:3},
-{tournament:"World Grand Prix",round:"Second Round • Last 16",status:"upcoming",time:"3:15 PM ET",player1:P("Jonny Clayton","WAL","",96.4,[95.2,98,94.7,97.6,96.4,99.1,95.8,97.0,96.1,96.4],[43,46,39,45,42,48,41,44,43,42]),player2:P("Wessel Nijman","NED","",98.1,[99.4,96.8,100.2,97.3,98.1,101,97.6,99.3,98.7,98.1],[45,41,48,43,44,50,42,47,45,44]),market1:"+125",market2:"-133"},
+{tournament:"World Grand Prix",round:"Second Round • Last 16",status:"live",time:"LIVE",player1:P("Jonny Clayton","WAL","",96.4,[95.2,98,94.7,97.6,96.4,99.1,95.8,97.0,96.1,96.4],[43,46,39,45,42,48,41,44,43,42]),player2:P("Wessel Nijman","NED","",98.1,[99.4,96.8,100.2,97.3,98.1,101,97.6,99.3,98.7,98.1],[45,41,48,43,44,50,42,47,45,44]),market1:"+125",market2:"-133"},
 {tournament:"World Grand Prix",round:"Second Round • Last 16",status:"upcoming",time:"4:15 PM ET",player1:P("Gerwyn Price","WAL","",99.3,[101,97.8,100.4,98.2,99.3,102.1,98.8,100.0,99.6,99.3],[48,42,47,44,46,51,43,49,47,46]),player2:P("Ross Smith","ENG","",98.6,[97.4,100.1,96.9,99.7,98.6,101.2,97.8,99.1,98.0,98.6],[43,47,40,46,44,49,42,45,43,44]),market1:"-150",market2:"+145"},
 {tournament:"World Grand Prix",round:"Second Round • Last 16",status:"upcoming",time:"5:15 PM ET",player1:P("Luke Woodhouse","ENG","",96.8,[95.6,97.9,96.2,98,96.8,99.2,95.9,97.3,96.5,96.8],[40,44,41,45,42,47,39,43,41,42]),player2:P("Nathan Aspinall","ENG","",97.5,[98.3,96.7,99.1,95.9,97.5,100,96.4,98.2,97,97.5],[44,41,47,39,43,49,40,45,42,43]),market1:"+125",market2:"-137"}
 ]},
@@ -23,4 +23,4 @@ window.DARTS_DATES={
 {tournament:"World Grand Prix",round:"Second Round • Last 16",status:"upcoming",time:"Approx. 5:00 PM ET",player1:P("James Wade","ENG","",96,[95,97,96,94,98,96,97,95,96,96],[44,47,45,42,49,46,48,43,45,46]),player2:P("Stephen Bunting","ENG","",98,[99,97,100,96,98,101,97,99,98,98],[45,42,48,40,44,49,43,46,44,45]),market1:"—",market2:"—"}
 ]}}
 window.DARTS_DATA=window.DARTS_DATES["2026-09-30"];
-window.DARTS_DATA.sourceNote="Schedules/results verified from published World Grand Prix listings. Form and checkout trend values remain prototype data until a stats feed is connected.";
+window.DARTS_DATA.sourceNote="Schedules/results verified from published World Grand Prix listings. Form, checkout trends and season comparison values remain prototype data until a verified stats feed is connected.";
