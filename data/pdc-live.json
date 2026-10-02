@@ -1,15 +1,82 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-10-02T07:24:52.663645+00:00",
   "source": "PDC",
   "tournament": "2026 World Grand Prix",
   "matches": [
-    {"date":"2026-10-01","round":"Second Round","player1":"Niels Zonneveld","player2":"Gary Anderson","score1":3,"score2":1,"status":"final"},
-    {"date":"2026-10-01","round":"Second Round","player1":"James Wade","player2":"Stephen Bunting","score1":3,"score2":1,"status":"final"},
-    {"date":"2026-10-01","round":"Second Round","player1":"Luke Humphries","player2":"Jermaine Wattimena","score1":3,"score2":0,"status":"final"},
-    {"date":"2026-10-01","round":"Second Round","player1":"Gian van Veen","player2":"Ryan Searle","score1":3,"score2":2,"status":"final"},
-    {"date":"2026-10-02","round":"Quarterfinals","player1":"Nathan Aspinall","player2":"Ryan Joyce","score1":null,"score2":null,"status":"upcoming"},
-    {"date":"2026-10-02","round":"Quarterfinals","player1":"Gerwyn Price","player2":"Jonny Clayton","score1":null,"score2":null,"status":"upcoming"},
-    {"date":"2026-10-02","round":"Quarterfinals","player1":"Gian van Veen","player2":"James Wade","score1":null,"score2":null,"status":"upcoming"},
-    {"date":"2026-10-02","round":"Quarterfinals","player1":"Luke Humphries","player2":"Niels Zonneveld","score1":null,"score2":null,"status":"upcoming"}
+    {
+      "date": "2026-10-01",
+      "round": "Second Round",
+      "player1": "Niels Zonneveld",
+      "player2": "Gary Anderson",
+      "score1": 3,
+      "score2": 1,
+      "status": "final"
+    },
+    {
+      "date": "2026-10-01",
+      "round": "Second Round",
+      "player1": "James Wade",
+      "player2": "Stephen Bunting",
+      "score1": 3,
+      "score2": 1,
+      "status": "final"
+    },
+    {
+      "date": "2026-10-01",
+      "round": "Second Round",
+      "player1": "Luke Humphries",
+      "player2": "Jermaine Wattimena",
+      "score1": 3,
+      "score2": 0,
+      "status": "final"
+    },
+    {
+      "date": "2026-10-01",
+      "round": "Second Round",
+      "player1": "Gian van Veen",
+      "player2": "Ryan Searle",
+      "score1": 3,
+      "score2": 2,
+      "status": "final"
+    },
+    {
+      "date": "2026-10-02",
+      "round": "Quarterfinals",
+      "player1": "Nathan Aspinall",
+      "player2": "Ryan Joyce",
+      "score1": null,
+      "score2": null,
+      "status": "upcoming"
+    },
+    {
+      "date": "2026-10-02",
+      "round": "Quarterfinals",
+      "player1": "Gerwyn Price",
+      "player2": "Jonny Clayton",
+      "score1": null,
+      "score2": null,
+      "status": "upcoming"
+    },
+    {
+      "date": "2026-10-02",
+      "round": "Quarterfinals",
+      "player1": "Gian van Veen",
+      "player2": "James Wade",
+      "score1": null,
+      "score2": null,
+      "status": "upcoming"
+    },
+    {
+      "date": "2026-10-02",
+      "round": "Quarterfinals",
+      "player1": "Luke Humphries",
+      "player2": "Niels Zonneveld",
+      "score1": null,
+      "score2": null,
+      "status": "upcoming"
+    }
+  ],
+  "checkedSources": [
+    "https://www.pdc.tv/news/"
   ]
 }
