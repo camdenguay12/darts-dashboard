@@ -1,8 +1,15 @@
-name: Refresh current World Grand Prix bracket
+name: Refresh PDC results
+
 on:
-  push:
-    paths:
-      - '.github/workflows/refresh-wgp.yml'
+  workflow_dispatch:
+  schedule:
+    # GitHub schedules are UTC. Every 15 minutes; the script only commits when data changes.
+    - cron: '*/15 * * * *'
+
+concurrency:
+  group: pdc-results-refresh
+  cancel-in-progress: true
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -10,20 +17,18 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Update current World Grand Prix rounds
-        shell: python
+        with:
+          fetch-depth: 0
+      - name: Fetch official PDC results
+        run: python scripts/pdc_refresh.py
+      - name: Commit changed data
         run: |
-          from pathlib import Path
-          p=Path('tournaments.html')
-          s=p.read_text()
-          old="const WGP_SECOND=[['Ryan Joyce','3','Danny Noppert','0'],['Jonny Clayton','','Wessel Nijman',''],['Gerwyn Price','','Ross Smith',''],['Luke Woodhouse','','Nathan Aspinall',''],['Luke Humphries','','Jermaine Wattimena',''],['Niels Zonneveld','','Gary Anderson',''],['Gian van Veen','','Ryan Searle',''],['James Wade','','Stephen Bunting','']];R.wgp=[WGP_FIRST,WGP_SECOND,null,null,null];"
-          new="const WGP_SECOND=[['Ryan Joyce','3','Danny Noppert','0'],['Jonny Clayton','3','Wessel Nijman','1'],['Gerwyn Price','3','Ross Smith','0'],['Luke Woodhouse','0','Nathan Aspinall','3'],['Luke Humphries','3','Jermaine Wattimena','0'],['Niels Zonneveld','3','Gary Anderson','1'],['Gian van Veen','3','Ryan Searle','2'],['James Wade','3','Stephen Bunting','1']];const WGP_QF=[['Nathan Aspinall','','Ryan Joyce',''],['Gerwyn Price','','Jonny Clayton',''],['Gian van Veen','','James Wade',''],['Luke Humphries','','Niels Zonneveld','']];R.wgp=[WGP_FIRST,WGP_SECOND,WGP_QF,null,null];"
-          if old not in s: raise SystemExit('Expected WGP block not found')
-          p.write_text(s.replace(old,new))
-      - name: Commit refreshed bracket
-        run: |
+          if git diff --quiet -- data/pdc-live.json; then
+            echo "No PDC data changes."
+            exit 0
+          fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add tournaments.html
-          git commit -m "Update World Grand Prix round two and quarterfinal bracket"
+          git add data/pdc-live.json
+          git commit -m "Auto-refresh PDC darts results"
           git push
